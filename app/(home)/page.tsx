@@ -20,7 +20,9 @@ export default async function HomePage() {
       <h1>Home</h1>
       {movies.map((movie) => (
         <li key={movie.id}>
-          <Link href={`/movies/${movie.id}`}>{movie.title}</Link>
+          <Link prefetch href={`/movies/${movie.id}`}>
+            {movie.title}
+          </Link>
         </li>
       ))}
     </div>
